@@ -123,7 +123,7 @@ nav h4:hover::after{
 }
 
 
-.li:hover .hoverEff{
+#lisCon:hover .hoverEff{
     top: 0;
 }
 
