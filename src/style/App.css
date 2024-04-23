@@ -1,0 +1,197 @@
+@font-face {
+    font-family: haas;
+    src: url(../NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+    font-family: haas;
+    font-weight: 100;
+    src: url(../NeueHaasDisplayLight.ttf);
+}
+@font-face {
+    font-family: haas;
+    font-weight: 200;
+    src: url(../NeueHaasDisplayRoman.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: haas;
+}
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+nav h4{
+    padding: 10px 20px;
+    border: 1px solid #00000035; 
+    border-radius: 50px;
+    font-weight: 500;
+    position: relative;
+    font-size: 18px;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+nav h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0%;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+nav h4 a{
+    position: relative;
+    z-index: 9;
+}
+
+nav h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+
+#shape2 {
+    animation: anime2 3s linear infinite alternate;
+}
+#shape3 {
+    animation: anime1 2s linear infinite alternate;
+}
+
+
+@keyframes anime1 {
+    from{
+        transform: translate(53%, -3%);
+    }
+    to{
+        transform: translate(0% , 10%) ;
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(10%, -7%);
+    }
+    to{
+        transform: translate(-20% , 30%) ;
+    }
+}
+
+#movingText::-webkit-scrollbar{
+    display: none;
+}
+
+.slideText{
+    animation: slide 10s linear infinite;
+}
+
+
+
+@keyframes slide {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%)
+    }
+}
+
+
+#hero2Shape{
+    animation: heroShapeAnime 4s linear infinite alternate-reverse;
+}
+
+@keyframes heroShapeAnime {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+
+.li:hover .hoverEff{
+    top: 0;
+}
+
+.footer-shape {
+    width: 100%;
+    height: 50vh;
+    background-color: #fe330a;
+    position: absolute;
+    transform-style: preserve-3d;
+    will-change: transform;
+    filter: blur(85px);
+}
+
+.footer-shape:nth-child(1) {
+    top: 50px;
+    left: 50%;
+    transform-origin: top center;
+    animation: animateShape1 10s infinite alternate;
+}
+
+.footer-shape:nth-child(2) {
+    top: 50px;
+    left: calc(100vw - 50px);
+    transform-origin: top right;
+    animation: animateShape2 8s infinite alternate;
+}
+
+
+.footer-shape:nth-child(3) {
+    top: 50px;
+    left: 50px;
+    transform-origin: top left;
+    animation: animateShape3 7s infinite alternate;
+}
+
+@keyframes animateShape1 {
+    0% { transform: translate(-50%, -50%) rotate(-10deg); }
+    100% { transform: translate(-50%, -50%) rotate(10deg); }
+}
+
+@keyframes animateShape2 {
+    0% { transform: translate(-50%, -50%) rotate(-10deg); }
+    100% { transform: translate(-30%, -30%) rotate(5deg); }
+}
+
+@keyframes animateShape3 {
+    0% { transform: translate(-50%, -50%) rotate(5deg); }
+    100% { transform: translate(-50%, -50%) rotate(-10deg); }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+  
+.swiper-slide {
+  width: 30%;
+  border-left: 1px solid #aeadad;
+  padding: 0 2vw;
+}
+
+.swiper-slide p {
+    font-weight: 100;
+}
+
+@media (max-width:600px) {
+    nav img {
+        transition: all ease 0.2s;
+        height: 9vh;
+    }
+}
